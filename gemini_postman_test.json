@@ -1,0 +1,45 @@
+{
+	"info": {
+		"name": "Gemini API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check API Key",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"Hello, can you hear me?\"\n        }\n      ]\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAOjhOFmoYsDsPBDJIz2FkARlMJb43_w18",
+					"protocol": "https",
+					"host": [
+						"generativelanguage",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1beta",
+						"models",
+						"gemini-1.5-flash:generateContent"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "AIzaSyAOjhOFmoYsDsPBDJIz2FkARlMJb43_w18"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
